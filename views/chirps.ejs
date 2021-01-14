@@ -1,0 +1,74 @@
+<%- include("partials/header") %>
+
+<header>
+	<div class="container" style = "position: sticky;">
+		<div class="jumbotron">
+			<div class="container">
+				<h1>What's chirpin' ?</h1>
+				<h3> Enjoy chirps from all our users. <h3>
+				<p>
+					<a class = "btn btn-primary btn-large" href= "/chirps/new"> Would you like to chirp? </a>
+				</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="container" id="allchirps">
+	<% chirps.forEach(function(chirp){ %>
+		<div class="container"  id="chirps">
+			<h3> <strong> <%= chirp.user %> </strong> <h3>
+			<h4><%= chirp.text %></h4>
+			<hr>
+			<img class= "reaction" src="https://img.icons8.com/nolan/45/like.png"/>
+			<img class= "reaction" src="https://img.icons8.com/nolan/42/speech-bubble.png"/> 
+			<!--<button value="like"> like </button>
+			<button value="comment"> comment </button>-->
+
+		</div>
+	<% }) %>
+</div>
+
+
+<style>
+body{
+	background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+}
+
+#allchirps{
+	margin:4px auto;
+	border-radius : 5px;
+	background-color: rgba(255, 255, 255, 0.25); 
+	width: 75%;
+	height: auto;
+	box-shadow:0 0 3px rgba(1, 1, 1, 0.02);
+	padding-top:15px;
+}
+
+.reaction{
+	margin:0px 10px 15px 10px;
+}
+
+#chirps{
+  border: 0.5px solid white;
+  width : 99%;
+  border-radius : 5px;
+  margin-bottom : 15px;
+}
+
+hr {
+    width: 99%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.jumbotron{
+  background-color:rgba(255, 255, 255, 0.25); 
+}
+
+</style>
+
+<%- include("partials/footer") %>

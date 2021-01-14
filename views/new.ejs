@@ -1,0 +1,57 @@
+<%- include("partials/header") %>
+
+<div class="jumbotron">
+	<div class="container">
+		<h1 style="text-align: center;"> Chirp away! </h1>
+
+		<div style="width: 30%; margin:0 auto;">
+			<form action="/writechirp" method="post">
+
+			<div class="form-group">
+				<!--<input class="form-group" type="text" name="text" placeholder="Chirp.. (Max 200 characters)"  maxlength="200">-->
+		
+				<textarea id="input" class="form-group" name="text" placeholder="Chirp.. (Max 200 characters)" cols="43" rows="8" maxlength="200"></textarea>
+			</div>
+
+			<div class="form-group">
+				<button class= "btn btn-default btn-block"> SUBMIT </button>
+			</div>
+
+			</form>
+			
+			<a class= "btn btn-default btn-block" href="/chirps"> Back to home. </a>
+
+		</div>
+
+		
+	</div>
+
+<style>
+body{
+	background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+	overflow: hidden;
+}
+
+.jumbotron{
+	margin-top:5%;
+	margin:5% auto;
+	border-radius : 5px;
+	background-color: rgba(250, 250, 250, 0.4); 
+	width: 75%;
+	height: auto;
+	box-shadow:0 0 3px rgba(1, 1, 1, 0.02);
+	padding-top:15px;
+}
+
+#input{
+	color:black;
+	resize: none;
+	height:180px;
+	width:100%;
+	border:none;
+	border-radius:2px;
+}
+</style>
+
+<br><br>
+<%- include("partials/footer") %>

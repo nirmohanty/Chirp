@@ -1,0 +1,68 @@
+<%- include("partials/header") %>
+
+<div class="jumbotron">
+	<div class="container">
+		<h3 class= "heading" style="text-align: center;"> Log-in to your Chirp account! </h3>
+
+		<div style="width: 30%; margin:0 auto;">
+			<form action="/userlogin" method="post">
+
+				<div class="form-group">
+					<input class="form-group" type="text" name="olduser" placeholder="Registered username">
+				</div>
+
+				<div class="form-group">
+					<input class="form-group" type="text" name="oldpass" placeholder="Password">
+				</div>
+
+				<div class="form-group">
+					<button class= "btn btn-default btn-block"> SUBMIT </button>
+				</div>
+			</form>
+			
+			<a class= "btn btn-default btn-block" href="/"> TO THE LANDING PAGE </a>
+		</div>
+	</div>
+</div>
+
+<style>
+body{
+	background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+	overflow: hidden;
+}
+
+.jumbotron{
+	margin:10% auto;
+	border-radius : 5px;
+	background-color: rgba(250, 250, 250, 0.0); 
+	width: 75%;
+	height: auto;
+	box-shadow:0 0 3px rgba(1, 1, 1, 0.02);
+	padding-top:15px;
+}
+
+form{
+	margin-top:20px;
+}
+
+.heading {
+	font-weight: 700;
+	font-size: 3em;
+}
+
+input{
+	color:black;
+	resize: none;
+	width:100%;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	border-down:1px;
+  	border-color: #ffffff;
+	background:none;
+	border-radius:2px;
+}
+</style>
+
+<br><br>
+<%- include("partials/footer") %>
